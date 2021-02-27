@@ -1,0 +1,399 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.section-headers {
+  display: flex;
+  justify-content: center;
+}
+
+/* Header */
+
+header {
+  background-color: black;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+header h1 {
+  margin-left: 15px;
+  font-family: Astloch;
+  font-weight: 400;
+}
+
+#logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+nav {
+  margin-right: 20px;
+  font-family: Quicksand;
+}
+
+a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Main */
+
+.site-hero {
+  top: 70px;
+  position: relative;
+  height: 1000px;
+  background-image: url('../images/abstract.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: inline;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .3);
+  background-size: cover;
+  z-index: 3;
+}
+
+.site-hero h2,
+.site-hero p {
+    margin-left: 10%;
+    z-index: 5;
+    position: relative;
+}
+
+.site-hero h2 {
+  font-family: Astloch;
+  font-weight: 400;
+  font-size: 3em;
+  top: -80px;
+}
+
+.site-hero p {
+  top: -100px;
+  font-family: 'Quicksand';
+  font-size: 1.5em;
+  font-weight: lighter;
+  max-width: 20em;
+}
+
+/* Portfolio */
+
+#portfolio {
+  position: relative;
+  top: 70px;
+  margin-bottom: 50px;
+}
+
+#portfolio h2 {
+  font-size: 2.5em;
+  font-family: Astloch;
+  width: 100px;
+  margin: 40px auto;
+  padding-bottom: 20px;
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.images img {
+  max-height: 250px;
+}
+
+.image-container {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Quicksand';
+}
+
+/* Team */
+
+#team {
+  position: relative;
+  top: 70px;
+  background-color: black;
+  padding-bottom: 80px;
+  width: 100%;
+}
+
+#team h2 {
+  margin: 0 auto;
+  font-family: Astloch;
+  font-size: 2.5em;
+  color: white;
+  padding: 40px;
+}
+
+.people {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+
+}
+
+.people img {
+  max-height: 200px;
+  border-radius: 100px;
+  margin-top: 20px;
+}
+
+.people-container {
+  background-color: black;
+  color: white;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.people h3 {
+  font-family: Astloch;
+  font-size: 1.5em;
+}
+
+.people p {
+  font-family: Quicksand;
+  margin: 0 30px;
+}
+
+footer {
+  position: relative;
+  top: 70px;
+  font-family: Astloch;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+}
+
+footer h6 {
+  margin-left: 20px;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 1400px) {
+  .images {
+    flex-direction: column;
+  }
+
+  .image-container {
+    margin-bottom: 50px;
+  }
+
+  .images img {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .people {
+    align-content: center;
+    justify-content: space-around;
+  }
+
+  .people-container {
+    align-self: center;
+    margin-bottom: 20px;
+    width: 250px;
+    max-width: 300px;
+    justify-content: center;
+    height: 60%;
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+  }
+
+  .people-container img {
+    margin-top: 0px;
+  }
+
+  .people-container p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .site-hero h2,
+  .site-hero p {
+    margin: 0 auto;
+
+  }
+
+  .site-hero h2 {
+    margin-bottom: 50px;
+    font-size: 3em;
+  }
+
+  .site-hero p {
+    position: relative;
+    left: 20px;
+    width: 100%;
+  }
+
+  .site-hero {
+    align-content: center;
+    height: 800px;
+  }
+
+  .images img {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-device-width: 900px), only screen and (max-width: 1000px)   {
+  header {
+    height: 100px;
+  }
+
+  header h1 {
+    font-size: 3em;
+  }
+
+  nav {
+    font-size: 1.8em;
+  }
+
+  .site-hero h2 {
+    font-size: 5em;
+    position: relative;
+    top: 1px;
+  }
+
+  .site-hero p {
+    font-size: 2em;
+    position: relative;
+    top: 1px;
+  }
+
+  .image-container {
+    font-size: 2em;
+  }
+
+  .people {
+    flex-direction: column;
+  }
+
+  .people-container {
+    min-width: 100%;
+    margin-top: 30px;
+  }
+
+  .people-container img {
+    min-height: 500px;
+    margin-top: 20px;
+    border-radius: 600px;
+  }
+
+  .people-container h3 {
+    font-size: 3em;
+  }
+
+  footer {
+    font-size: 2em;
+    padding-bottom: 20px;
+  }
+
+  #portfolio h2 {
+    width: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    position: relative;
+    left: 50px;
+  }
+
+  #portfolio h2,
+  #team h2 {
+    font-size: 4em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav {
+    font-size: 1em;
+  }
+
+  .site-hero h2 {
+    font-size: 3em;
+  }
+
+  .site-hero p {
+    font-size: 1.5em;
+  }
+
+  .people-container {
+    background-color: black;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .images {
+    width: 90%;
+  }
+
+  .images img {
+    max-height: 300px;
+  }
+
+  .people {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+  .images img {
+    max-height: 350px; ;
+  }
+}
+
+@media only screen and (min-width: 2800px) {
+  .images img {
+    max-height: 400px;
+  }
+}
+
+@media only screen and (max-height: 1300px) and (min-width: 1000px) {
+  .site-hero {
+    height: 600px;
+  }
+  .site-hero h2 {
+    top: 20px;
+  }
+  .site-hero p {
+    top: 0px;
+  }
+}
